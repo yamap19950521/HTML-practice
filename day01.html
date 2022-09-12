@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color:#292421;
+            font-weight:800;
+        }
+        .item {
+            text-align: center;
+        }
+        .wrap{
+            width:100%;
+            /*大螢幕的寬度不要滿版 */
+            max-width: 1400px;
+            margin:auto;
+            }
+        .item{
+                margin:10px;
+                padding:10px;
+                background-color: antiquewhite;
+            }
+
+        
+        @media screen and (min-width:768px){
+
+            .wrap{
+                display:flex;
+            }
+            
+            .item{
+                width:500px;
+                    /* 不用計算，隨便寫寬度就好 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>三欄排版練習</h1>
+    <div class="wrap">
+        <div class="item">
+            <img src="https://picsum.photos/300/200?random=1" alt="">
+            <h2>title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aliquam ipsam in adipisci repellat ipsa culpa exercitationem dolores, earum sapiente ratione labore explicabo cum. Cumque omnis aliquam adipisci pariatur sequi.</p>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/300/200?random=2" alt="">
+            <h2>title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aliquam ipsam in adipisci repellat ipsa culpa exercitationem dolores, earum sapiente ratione labore explicabo cum. Cumque omnis aliquam adipisci pariatur sequi.</p>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/300/200?random=3" alt="">
+            <h2>title</h2>
+            <p>Lorem ipsum dolorr adipisci pariatur sequi.</p>
+        </div>
+    </div>
+
+      <div class="wrap">
+        <div class="item">
+            <img src="https://picsum.photos/300/200?random=4" alt="">
+            <h2>title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aliquam ipsam in adipisci repellat ipsa culpa exercitationem dolores, earum sapiente ratione labore explicabo cum. Cumque omnis aliquam adipisci pariatur sequi.</p>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/300/200?random=5" alt="">
+            <h2>title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aliquam ipsam in adipisci repellat ipsa culpa exercitationem dolores, earum sapiente ratione labore explicabo cum. Cumque omnis aliquam adipisci pariatur sequi.</p>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/300/200?random=6" alt="">
+            <h2>title</h2>
+            <p>Lorem ipsum dolorr adipisci pariatur sequi.</p>
+        </div>
+    </div>
+</body>
+</html>
