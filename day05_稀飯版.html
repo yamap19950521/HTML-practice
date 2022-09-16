@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        margin: 0;
+        font-family: Helvetica, sans-serif;
+        background-color: #f4f4f4;
+      }
+      /* header ---------------------------*/
+      a {
+        color: #000;
+      }
+      
+      /* header */
+      
+      .header {
+        background-color: #fff;
+        box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+      }
+      
+      .header ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        background-color: #fff;
+      }
+      
+      .header li a {
+        display: block;
+        padding: 20px 20px;
+        border-right: 1px solid #f4f4f4;
+        text-decoration: none;
+      }
+      
+      .header li a:hover,
+      .header .menu-btn:hover {
+        background-color: #f4f4f4;
+      }
+      
+      .header .logo {
+        display: block;
+        float: left;
+        font-size: 2em;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+      
+      /* menu */
+      
+      .header .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+      }
+      
+      /* menu icon */
+      
+      .header .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+      }
+      
+      .header .menu-icon .navicon {
+        background: #333;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+      }
+      
+      .header .menu-icon .navicon:before,
+      .header .menu-icon .navicon:after {
+        background: #333;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+      }
+      
+      .header .menu-icon .navicon:before {
+        top: 5px;
+      }
+      
+      .header .menu-icon .navicon:after {
+        top: -5px;
+      }
+      
+      /* menu btn */
+      
+      .header .menu-btn {
+        display: none;
+      }
+      
+      .header .menu-btn:checked ~ .menu {
+        max-height: 240px;
+      }
+      
+      .header .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+      }
+      
+      .header .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+      }
+      
+      .header .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg);
+      }
+      
+      .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+      .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+        top: 0;
+      }
+      
+      
+      
+      @media (min-width: 768px) {
+        .header li {
+          float: left;
+        }
+        .header li a {
+          padding: 20px 30px;
+        }
+        .header .menu {
+          clear: none;
+          float: right;
+          max-height: none;
+        }
+        .header .menu-icon {
+          display: none;
+        }
+      }
+
+
+      /* 關於我們 */
+      img{
+        width:100%;
+      }
+      .title{
+        text-align:center;
+      }
+      .item {
+        text-align:center;
+      }
+      .service p{
+        margin:0 5px;
+      }
+      footer{
+        width:100%;
+        margin-top:30px;
+        padding:8px 0;
+        background:#000;
+        color:rgb(221, 217, 217);
+        text-align: center;
+      }
+      @media screen and (min-width:768px){
+        
+        .wrap{
+          width:1400px;
+          margin:auto;
+          display:flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .item{
+          margin:0 20px;
+          width: 300px;
+        }
+        .service .wrap{
+          margin-top:20px;
+        }
+      }
+     
+      </style>
+</head>
+<body>
+       <!-- header -->
+       <header class="header">
+        <a href="" class="logo">CSS Nav</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+          <li><a href="#work">Our Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+   <!-- banner -->
+   <div class="banner">
+    <img src="https://picsum.photos/id/684/600/200" alt="" width="100%;">
+  </div>
+
+  <!-- 關於我們 -->
+  <div class="about">
+    <div class="title">
+      <h2>關於我們</h2>
+      <p>Lorem ipsum dolor sit agiat laudantium doloremque sit?</p>
+    </div>
+    <div class="wrap">
+      <div class="item">
+        <img src="https://picsum.photos/id/300/400/400" alt="">
+        <h3>title</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus asperiores neque alias impedit eligendi facilis sed praesentium. Maiores tempore optio mollitia nostrum, aliquam atque, tempora dignissimos amet illo autem ex?</p>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/id/300/400/400" alt="">
+        <h3>title</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus asperiores neque alias impedit eligendi facilis sed praesentium. Maiores tempore optio mollitia nostrum, aliquam atque, tempora dignissimos amet illo autem ex?</p>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/id/300/400/400" alt="">
+        <h3>title</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus asperiores neque alias impedit eligendi facilis sed praesentium. Maiores tempore optio mollitia nostrum, aliquam atque, tempora dignissimos amet illo autem ex?</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 產品介紹 -->
+  <div class="about">
+    <div class="title">
+      <h2>產品介紹</h2>
+      <p>Lorem ipsum dolor sit agiat laudantium doloremque sit?</p>
+    </div>
+    <div class="wrap">
+      <div class="item">
+        <img src="https://picsum.photos/id/684/600/400" alt="">
+        <h3>title</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus asperiores neque alias impedit eligendi facilis sed praesentium. Maiores tempore optio mollitia nostrum, aliquam atque, tempora dignissimos amet illo autem ex?</p>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/id/684/600/400" alt="">
+        <h3>title</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus asperiores neque alias impedit eligendi facilis sed praesentium. Maiores tempore optio mollitia nostrum, aliquam atque, tempora dignissimos amet illo autem ex?</p>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/id/684/600/400" alt="">
+        <h3>title</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus asperiores neque alias impedit eligendi facilis sed praesentium. Maiores tempore optio mollitia nostrum, aliquam atque, tempora dignissimos amet illo autem ex?</p>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/id/684/600/400" alt="">
+        <h3>title</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus asperiores neque alias impedit eligendi facilis sed praesentium. Maiores tempore optio mollitia nostrum, aliquam atque, tempora dignissimos amet illo autem ex?</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- 服務介紹 -->
+ <div class="service">
+  <div class="title">
+    <h2>服務介紹</h2>
+    <p>Lorem ipsum dolor sit agiat laudantium doloremque sit?</p>
+  </div>
+  <div class="wrap">
+      <img src="https://picsum.photos/id/600/200/100" alt="">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus asperiores neque alias impedit eligendi facilis sed praesentium. Maiores tempore optio mollitia nostrum, aliquam atque, tempora dignissimos amet illo autem ex?</p>
+  </div>
+</div>
+
+<footer>
+    &copy;Copyright 2022 By Livia Li
+</footer>
+
+</body>
+</html>
